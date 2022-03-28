@@ -1,0 +1,32 @@
+function FindStrings() {
+
+    var selectionStr = getSelection().focusNode.textContent.toLowerCase();
+    var goodStuff = ['Zink', 'panthenol', 'aloe vera', 'benzoylperoxid', 'salicylsäure', 'vitamin-a-säure', 'retinol', 'niacinamid', 'Rose', 'Ringelblume', 'Kamille', 'Haferbrei', 'Jojoba', 'argan', 'hyaluron',
+                    'Vitamin C', 'Ceramide', 'Kollagen', 'Bernsteinsäure', 'Kalzium', 'Süßholzwurzel', 'Antioxidan', 'Cica', 'vitamin-a', 'Glycerin'];
+    var goodStuffStr = '';
+    var badStuff = ['COCOS OIL', 'COCOS NUCIFERA', 'COCOS NUCIFERA OIL' , 'Kokosöl', 'olivenöl', 'acetylated', 'lanolin', 'alcohol', 'parfume', 'Fragrance', 'duftstoffe', 'isopropanol', 'Sodium Benzoate', 'Methylparabene', 
+                    'Ethylparabene', 'Pentylparabene', 'Benzylparabene', 'Phenylparabene', 'Butylparabene', 'Propylparabene', 'Isobutylparabene', 
+                    'Eugenol', 'Cinnamal', 'Citral', 'Limonene', 'Coumarin', 'Citronellol', 'Farnesol', 'Linalool', 'PEG', 'Aluminium', 'Aluminium Chlorohydrate', 'Aluminiumchlorid', 'MOSH', 'MOAH',
+                    'Alumina', 'Aluminium', 'Cl77000', 'Butyl Methoxydibenzoylmethane Oxybenzone', '4-Methylbenzylidene Camphor', 'Benzophenone-1', 'Benzophenone-2', 'Benzophenone-3', 'Benzophenone-4',
+                    'Triclosan', 'Sodium Hydroxymethylglycinate', 'Hexamidine Diisethionate', '2-Bromo-2-Nitropropane-1','3-Diol, Quaternium-15', 'Mineral Oil', 'Petrolatum', 'Paraffinum Liquidum', 
+                    'Paraffinum Subliquidum', 'Cera Microcristallina', 'Microcrystalline Wax', 'Ozokerit', 'Ceresin', 'Vaseline', 'Propylparaben', 'Btylparaben', 'Methylparaben', 'Ethylparaben', 'Isobutylparaben', 
+                    'Isopropylparaben',  'Diethyl Phthalate', 'Diethylhexyl Phthalate', 'Di-n-Butylphthalat', 'DBP', 'Propylene Glycol', '1,2-Propanediol', '1,2-Dihydroxypropane', 'Methyl Ethyl Glycol', 'MEG', 'Methylethylene Glycol',
+                    'PEG', 'PPG', 'Ceteareth-8', 'Polyethylenglykol', 'Dimethicone', 'Trimethicone', 'fruitextrect', 'fruite', 'extract', 'Methicone', 'Amodimethicone', 'Polysiloxane', "methicone", "siloxane", 'Sodium-Lauryl-Sulfat',
+                    'Sodium-Laureth-Sulfat', 'Ammonium-Lauryl-Sulfat', 'Sodium-Myreth-Sulfat'];
+    var badStuffStr = '';
+
+    //ph wert 5 – 5,5
+    
+    for(stuff of goodStuff) {
+        (selectionStr.match(stuff.toLowerCase())) ? goodStuffStr += stuff.toLowerCase() + ', ' : '';
+    }
+
+    for(stuff of badStuff) {
+        (selectionStr.match(stuff.toLowerCase())) ? badStuffStr += stuff.toLowerCase() + ', ' : '';
+    }
+
+    var finalStr = 'Ergebnis:\n\nGoodStuff: ' + goodStuffStr + '\n\nBadStuff: ' + badStuffStr;
+    alert(finalStr);
+    console.log(finalStr);
+
+}
