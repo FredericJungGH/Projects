@@ -1,0 +1,92 @@
+<!-- ToDo
+- CHeckboxen
+- Grund Struktur
+- Drawing board
+- SQL
+- Inputs
+- JS -->
+
+<html lang="de" style="background-color: #FFFFFF;">
+  <head>
+    <script>src="/JS/DungWorScripts.js"</script>
+    <link rel="stylesheet" href="/CSS/myStyle.css">
+  </head>
+  <body>
+    
+    <!--
+      Tab Bar
+    -->
+    <button class="tablink" id="homeBtn">Home</button>
+    <button class="tablink" id="newsBtn">News</button>
+    <button class="tablink" id="contactBtn">Contact</button>
+    <button class="tablink" id="aboutBtn">About</button>
+    
+    <div id="Home" class="tabcontent">
+      <h3>Home</h3>
+      <p>Home is where the heart is..</p>
+    </div>
+    
+    <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <p>Some news this fine day!</p>
+    </div>
+    
+    <div id="Contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+    
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+
+    <!--
+      Charackter
+    -->
+    <div class="tab" id= "Charackter" style="display:block">  
+      <div>
+        <input id="2" style="margin-top: 1%;"> </input>
+        <button id="21" onclick="doThis()">Do It</button>
+      </div>
+      <div>
+        <input id="3" style="margin-top: 1%;"></input>
+      </div>
+    </div>
+
+    <!--
+      Abilitys
+    -->
+    <div class="tab" id="Ability" style="display:none">
+      <p style="font-size: large; color: black;">Fähigkeiten</p>
+      <div class="row" style="display:block; width:100%;">
+        <div class="column">
+          <input type="checkbox">Einfache Waffenöle
+          Wenn du Transmutation einsetzt, kannst du ein einfaches Waffenöl aus 
+          der Liste wählen und deine Klingen damit behandeln.
+          </input>
+        </div>
+        <div class="column">
+          <input type="checkbox">Einfache Waffenöle
+          Wenn du Transmutation einsetzt, kannst du ein einfaches Waffenöl aus 
+          der Liste wählen und deine Klingen damit behandeln.
+          </input>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      Inventar
+    -->
+    <div class="tab" id= "Inventory" style="display:none">
+
+    </div>
+
+  </div class="tab" id= "Journey" style="display:none">
+    <!--
+      Jouney
+    -->
+    <div>
+
+    </div>
+</html>
